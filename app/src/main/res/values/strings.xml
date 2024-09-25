@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ProjectKotlin2</string>
+
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="intro_title">Welcome to <font color="#39c7a5">Digital Store</font> <font color="#39c7a5">Gateway</font> to the Latest</string>
+    <string name="lorem_ipsum">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Nam in scelerisque sem. Mauris volutpat, dolor id interdum ullamcorper,
+        risus dolor egestas lectus, sit amet mattis purus dui nec risus.
+        Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a, ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus. \n\nSuspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae, molestie nibh. Phasellus at commodo eros non aliquet metus. Sed maximus nisl nec dolor
+</string>
+    <string name="intro_sub_title">Sign in to explore a wide range of cutting-edge \ndigital products. Don’t have an account yet?\nRegister now and enjoy a seamless
+        \nand secure shopping experience.</string>
+    <string name="signing">Already have an account? o <font color="#39c7a5">Sign in</font></string>
+    <string name="my_order">My order</string>
+    <string name="profile">Profile</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="cart">Cart</string>
+    <string name="explore">Explore</string>
+</resources>
