@@ -13,6 +13,12 @@
         android:theme="@style/Theme.ProjectKotlin2"
         tools:targetApi="31">
         <activity
+            android:name=".activity.ListItemActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.DetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".activity.HomeActivity"
             android:exported="false" />
         <activity
