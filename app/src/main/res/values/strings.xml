@@ -22,4 +22,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     <string name="wishlist">Wishlist</string>
     <string name="cart">Cart</string>
     <string name="explore">Explore</string>
+    <string name="check_out">Check out</string>
 </resources>

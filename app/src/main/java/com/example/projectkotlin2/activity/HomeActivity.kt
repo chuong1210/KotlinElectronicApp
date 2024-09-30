@@ -1,5 +1,6 @@
 package com.example.projectkotlin2.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -30,8 +31,14 @@ class HomeActivity : BaseActivity() {
         initBanners();
         initCategories()
         initRecommened()
+        initBottomMenu()
 
+    }
 
+    private fun initBottomMenu() {
+        binding.cartBtn.setOnClickListener{
+            startActivity(Intent(this@HomeActivity,CartActivity::class.java))
+        }
     }
 
     private fun initRecommened() {

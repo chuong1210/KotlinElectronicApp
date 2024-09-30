@@ -33,12 +33,12 @@ private val viewModel=MainViewModel();
     private fun initList() {
         binding.apply {
             progressBarList.visibility=View.VISIBLE
-            viewModel.recommended.observe(this,Observer{
+            viewModel.recommended.observe(this@ListItemActivity,Observer{
                 viewList.layoutManager=GridLayoutManager(this@ListItemActivity,2)
                 viewList.adapter=ListitemAdapter(it)
                 progressBarList.visibility=View.GONE
             })
-            viewModel.
+            viewModel.loadFiltered(id);
         }
     }
 

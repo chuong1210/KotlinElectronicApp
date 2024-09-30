@@ -36,7 +36,7 @@ class PicAdapter(val item:MutableList<String>,private val onImageSelected:(Strin
 
         if(selectedPosition==position)
         {
-            holder.binding.picLayout.setBackgroundResource(R.drawable.gree_bg_selected)
+            holder.binding.picLayout.setBackgroundResource(R.drawable.green_bg_selected)
 
         }
 else

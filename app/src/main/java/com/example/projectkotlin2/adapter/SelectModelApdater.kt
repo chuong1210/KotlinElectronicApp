@@ -36,7 +36,7 @@ holder.binding.modelTxt.text=item[position]
 
         if(selectedPosition==position)
         {
-holder.binding.modelLayout.setBackgroundResource(R.drawable.gree_bg_selected)
+holder.binding.modelLayout.setBackgroundResource(R.drawable.green_bg_selected)
             holder.binding.modelTxt.setTextColor(context.resources.getColor(R.color.green))
 
         }

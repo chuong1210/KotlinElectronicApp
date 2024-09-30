@@ -25,10 +25,10 @@ class MainViewModel():ViewModel() {
 val categories:LiveData<MutableList<CatagoryModel>> = _category
     val recommended:LiveData<MutableList<ItemsModel>> = _recommneded
 
-fun loadRecommended()
+fun loadFiltered(id:String)
 {
     val Ref=firebaseDatabase.getReference("Items")
-    val query:Query=Ref.orderByChild("showRecommeded").equalTo(true)
+    val query:Query=Ref.orderByChild("CategoryId").equalTo(id)
     query.addListenerForSingleValueEvent(object :ValueEventListener
     {
         override fun onDataChange(snapshot: DataSnapshot) {

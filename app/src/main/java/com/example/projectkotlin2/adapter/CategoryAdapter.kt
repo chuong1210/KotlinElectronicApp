@@ -1,7 +1,9 @@
 package com.example.projectkotlin2.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.content.res.ColorStateList
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,10 +15,12 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.R
 import com.bumptech.glide.load.resource.bitmap.CenterInside
 import com.bumptech.glide.request.RequestOptions
+import com.example.projectkotlin2.activity.ListItemActivity
 import com.example.projectkotlin2.databinding.SliderItemContainerBinding
 import com.example.projectkotlin2.databinding.ViewHolderCategoryBinding
 import com.example.projectkotlin2.model.CatagoryModel
 import com.example.projectkotlin2.model.SliderModel
+import com.google.firebase.database.Transaction.Handler
 
 class CategoryAdapter(private var items:MutableList<CatagoryModel>):RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
     private lateinit var  context: Context
@@ -24,20 +28,7 @@ class CategoryAdapter(private var items:MutableList<CatagoryModel>):RecyclerView
     private var lastSelectedPostion=-1
 
 
-   inner class ViewHolder(val binding: ViewHolderCategoryBinding):RecyclerView.ViewHolder(binding.root) {
-init {
-    binding.root.setOnClickListener{
-        val position=adapterPosition
-        if(position!=RecyclerView.NO_POSITION){
-            lastSelectedPostion=selectedPosition;
-            selectedPosition=position
-            notifyItemChanged(lastSelectedPostion)
-            notifyItemChanged(selectedPosition)
-
-        }
-    }
-}
-    }
+   inner class ViewHolder(val binding: ViewHolderCategoryBinding):RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -80,6 +71,25 @@ init {
             holder.binding.titleTxt.setTextColor(ContextCompat.
             getColor(holder.itemView.context,com.example.projectkotlin2.R.color.black)
             )
+        }
+        holder.binding.root.setOnClickListener{
+            val position=position
+            if(position!=RecyclerView.NO_POSITION){
+                lastSelectedPostion=selectedPosition;
+                selectedPosition=position
+                notifyItemChanged(lastSelectedPostion)
+                notifyItemChanged(selectedPosition)
+
+            }
+            android.os.Handler(Looper.getMainLooper()).postDelayed({
+                val intent=Intent(holder.itemView.context,ListItemActivity::class.java).apply {
+                    putExtra("id",item.id.toString())
+                    putExtra("title",item.title.toString())
+
+                }
+
+                ContextCompat.startActivity(holder.itemView.context,intent,null);
+            },1000)
         }
     }
 

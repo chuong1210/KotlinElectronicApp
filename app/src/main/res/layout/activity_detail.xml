@@ -153,7 +153,7 @@
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/addToCartBtn"
                     style="@android:style/Widget.Button.Inset"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:layout_weight="1"
@@ -169,7 +169,9 @@
                     android:layout_height="50dp"
                     android:layout_marginStart="16dp"
 
+                    android:layout_marginTop="8dp"
                     android:background="@drawable/grey_bg"
+                    android:importantForAccessibility="no"
                     app:srcCompat="@drawable/btn_2"
                     app:tint="@color/black" />
 

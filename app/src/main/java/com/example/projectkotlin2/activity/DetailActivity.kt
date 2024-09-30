@@ -73,7 +73,7 @@ class DetailActivity : BaseActivity() {
             finish()
         }
         binding.cartBtn.setOnClickListener{
-          //  startActivity(Intent(this@DetailActivity,))
+         startActivity(Intent(this@DetailActivity,CartActivity::class.java))
         }
 
     }
